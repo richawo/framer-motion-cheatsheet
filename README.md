@@ -2,6 +2,10 @@
 
 This is a [Next.js](https://nextjs.org/) project that demonstrates the usage of Framer Motion for creating animations. Framer Motion is a powerful library for creating smooth and interactive animations in React applications.
 
+## Live Demo
+
+You can see a live demo of this project here: https://framer-motion-nextjs-five.vercel.app/
+
 ## Getting Started
 
 To get started with this project, follow these steps:

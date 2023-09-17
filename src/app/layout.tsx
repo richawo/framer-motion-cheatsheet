@@ -17,8 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-[#223] h-screen w-full flex flex-col gap-2 items-center justify-center relative">
-          <div className="bg-black p-8 rounded-lg w-[60vmin] h-[50vmin] box">
+        <div className="h-screen w-full flex flex-col gap-2 items-center justify-center relative">
+          <div className="w-[60vmin] bg-black h-min relative border border-[#191919]">
             {children}
           </div>
           {pathname.length > 1 && (

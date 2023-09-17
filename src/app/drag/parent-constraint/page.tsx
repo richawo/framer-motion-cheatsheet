@@ -1,40 +1,39 @@
 "use client";
 
+import CardHeader from "@/components/card-header";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
 export default function Home() {
   const constraintsRef = useRef(null);
   return (
-    <div
-      className="flex h-full items-center justify-center gap-4 relative"
-      ref={constraintsRef}
-    >
-      <div className="absolute -top-0 gap-4 flex flex-col w-full items-center ">
-        <p className="bg-white/10 px-2 py-1 text-white/80 rounded-md">
-          {"Constrained to reference div (in this case, the parent)"}
-        </p>
-        <hr className="border-white/20 w-full" />
+    <>
+      <CardHeader
+        title="Drag with Reference Container Constraint"
+        subtitle="Limit dragging within a reference container"
+      />
+      <div className="p-8 rounded w-full h-[50vmin] flex items-center justify-center">
+        <div ref={constraintsRef} className="w-full h-full flex items-center justify-center gap-2">
+          {["Good", "Morning", "Sunshine"].map((text, i) => (
+            <motion.p
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: i * 0.25, duration: 0.5 },
+                scale: 1,
+              }}
+              whileHover={{ scale: 1.05 }}
+              whileDrag={{ scale: 2.5, transition: { duration: 1.5 } }}
+              key={text.toLocaleLowerCase().replaceAll(" ", "-")}
+              className="items-center rounded-md bg-green-500/10 px-2 py-1 text-sm text-green-400 ring-1 ring-inset ring-green-500/20 cursor-pointer font-semibold"
+              drag
+              dragConstraints={constraintsRef}
+            >
+              {text}
+            </motion.p>
+          ))}
+        </div>
       </div>
-      {["Good", "Morning", "Sunshine"].map((text, i) => (
-        <motion.p
-          initial={{ opacity: 0, y: -20, scale: 0.8 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: i * 0.25, duration: 0.5 },
-            y: 0,
-            scale: 1,
-          }}
-          whileHover={{ scale: 1.05 }}
-          whileDrag={{ scale: 2.5, transition: { duration: 1.5 } }}
-          key={text.toLocaleLowerCase().replaceAll(" ", "-")}
-          className="items-center rounded-md bg-green-500/10 px-2 py-1 text-base font-medium text-green-400 ring-1 ring-inset ring-green-500/20 cursor-pointer font-semibold"
-          drag
-          dragConstraints={constraintsRef}
-        >
-          {text}
-        </motion.p>
-      ))}
-    </div>
+    </>
   );
 }

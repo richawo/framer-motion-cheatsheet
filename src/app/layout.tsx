@@ -16,6 +16,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={inter.className}>
         <div className="h-screen w-full flex flex-col gap-2 items-center justify-center relative">
           <div className="w-[60vmin] bg-black h-min relative border border-[#191919]">

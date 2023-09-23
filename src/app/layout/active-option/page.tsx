@@ -51,7 +51,7 @@ export default function Page() {
   return (
     <ExampleWrapper
       title={"Active Option"}
-      subtitle={"Animate the border transition for the active option"}
+      subtitle={"Animate the border transition for the selected emoji"}
       code={code}
     >
       <ul className="flex flex-wrap gap-16 justify-center">

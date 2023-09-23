@@ -1,6 +1,29 @@
 # Framer Motion Animations in Next.js
 
-This is a [Next.js](https://nextjs.org/) project that demonstrates the usage of Framer Motion for creating animations. Framer Motion is a powerful library for creating smooth and interactive animations in React applications.
+This is a [Next.js](https://nextjs.org/) project that demonstrates using [Framer Motion](https://www.framer.com/motion/) to create animations in React. 
+
+Framer Motion is a production-ready motion library that helps developers craft immersive user experiences by adding gestures, transitions, and animations to their web apps.
+
+This project contains examples of Framer Motion animations like page transitions, drag gestures, scroll-based animations, animated SVG morphing, and more. It aims to showcase the capabilities of Framer Motion in a Next.js codebase.
+
+The project uses:
+
+- React for building UI components
+- Next.js as the React framework
+- Framer Motion for animations
+- Tailwind CSS for styling
+
+To learn more about the implementations, view the source code in the `pages/` and `components/` directories which contain examples of:
+
+- `motion` components for animating divs 
+- Layout animations
+- Drag gestures with `drag` prop
+- Keyframe-based animations
+- SVG Path animations
+
+You can also consult the official Framer Motion and Next.js documentation for more insights.
+
+This demo app is a great starting point for adding motion to your Next.js projects and experimenting with the animation capabilities of Framer Motion.
 
 ## Live Demo
 
